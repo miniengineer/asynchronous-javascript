@@ -20,12 +20,7 @@ let words = ["feed", "firewall", "panel", "alarm", "matrix", "matrix", "array", 
 // Promise.all([promise1, promise2]).then(translatedWords => console.log(translatedWords));
 
 function translateParallel(words) {
-  let result = [];
-  for (let i = 0; i < words.length; i++) {
-    result.push(translateToSpanish(words[i]));
-  }
-  console.log(result);
-  return Promise.all(result).then(translatedWords => console.log(translatedWords));
+  return Promise.all(words.map(word => translateToSpanish(word)));
 }
 
-console.log(translateParallel(words));
+translateParallel(words).then(translatedWords => console.log(translatedWords));
