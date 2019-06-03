@@ -10,12 +10,8 @@ function translateToSpanish(word) {
   });
 }
 
+
 let words = ["alarm", "circuit", "bus", "system", "firewall"];
-
-
-
-
-//, "feed", "firewall", "panel", "alarm", "matrix", "matrix", "array", "feed", "microchip", "interface", "interface", "program", "feed", "pixel", "matrix"
 
 const translateAll = (words) => {
   return new Promise(resolve => {

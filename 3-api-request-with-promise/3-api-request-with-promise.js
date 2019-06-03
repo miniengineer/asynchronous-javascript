@@ -21,33 +21,3 @@ function getData() {
 getData().then((data) => {
   console.log(displayUsers(data));
 });
-
-
-// function (error,reponce,body) {
-//   if (error) {
-//     return 'there has been some error';
-//   } else {
-//     result = body;
-//     //since node.js does not have alert property we use console.log
-//     console.log(displayUsers(result));
-//     request("http://5cdfa066fc90670014267af7.mockapi.io/exchange_rate", function (error,reponce,body) {
-//       if (error) {
-//         return 'there has been some error';
-//       } else {
-//         result = body;
-//         //since node.js does not have alert property we use console.log
-//         console.log(displayExchangeRate(result));
-//         request("http://5cdfa066fc90670014267af7.mockapi.io/weather", function (error,reponce,body) {
-//           if (error) {
-//             return 'there has been some error';
-//           } else {
-//             result = body;
-//             //since node.js does not have alert property we use console.log
-//             console.log(displayWeather(result));
-//             console.log('готово!!');
-//           }
-//         });
-//       }
-//     });
-//   }
-// });
