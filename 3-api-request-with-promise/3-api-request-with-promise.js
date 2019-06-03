@@ -1,7 +1,5 @@
 //importing function declaration from displayData module
 const displayUsers = require("./displayUsers.js").displayUsers;
-// const displayExchangeRate = require("./displayExchangeRate.js").displayExchangeRate;
-// const displayWeather = require("./displayWeather.js").displayWeather;
 
 
 //declaring request function using request node module
