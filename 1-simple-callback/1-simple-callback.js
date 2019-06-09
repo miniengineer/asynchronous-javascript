@@ -7,7 +7,7 @@ const displayData = require("./displayData.js").displayData;
 const request = require("request");
 let result;
 
-request("http://5cdfa066fc90670014267af7.mockapi.io/users", function (error,reponce,body) {
+request("https://5cfca797a954a70014032906.mockapi.io/accounts", function (error,reponce,body) {
   if (error) {
     return 'there has been some error';
   } else {

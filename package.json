@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/miniengineer/asynchronous-javascript/issues"
   },
-  "homepage": "https://github.com/miniengineer/asynchronous-javascript#readme"
+  "homepage": "https://github.com/miniengineer/asynchronous-javascript#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
 }
