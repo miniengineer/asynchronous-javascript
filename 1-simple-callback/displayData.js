@@ -1,8 +1,7 @@
 //declare a function inside of displayData module
 
 function displayData(data) {
-  var result = JSON.parse(data);
-  return result.map((element) => {
+  return JSON.parse(data).map((element) => {
     return `${element.name} has an id of ${element.id} and a phone number of ${element.phone}`;
   })
 };
