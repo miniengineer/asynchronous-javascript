@@ -17,11 +17,12 @@ const translateAll = (words) => {
   return new Promise(resolve => {
     let result = [];
     let p = translateToSpanish(words[0]);
-    //we must use let for the loop because if we use var declaration
-    //when call stack is empty and .then starts execution it will use the global var
-    //which in this case after for loop finishes will be 5, which will give an undefined, since we have only 4 elements in array
-    //we MUST use let, since it will declare a variable for each for loop block and when .then will go to the stack
-    //it will use the let variable which was created for each for loop
+    //`i` is declared globally and its value is updated with each `loop` iteration. 
+    //the asynchronous code is executed only when the `Call Stack` is empty 
+    //and thus will have access only to the last value of `i` which in the end will be equal to `4`
+    //need to use `let` declaration for `i` so that each chuck of asynchronous code within the `loop` 
+    //will have its own `i` value because `let` scope is limited to a block statement.
+    //in result, when `Call Stack` will be empty each `loop` iteration will execute with the correct `i` value.
     for (let i = 1; i < words.length; i++) {
       p = p.then(translation => {
         result.push(translation);
